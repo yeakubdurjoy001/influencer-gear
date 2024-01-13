@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700;1,800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800&display=swap");
 
-* {
+body {
   font-family: "Poppins", sans-serif;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  margin: 0 100px;
+  margin: 50px 50px;
   align-items: center;
   text-align: center;
+  background-color: white;
+  padding: 0 55px;
 }
 header img {
   width: 5%;
@@ -23,12 +25,106 @@ nav ul {
   list-style: none;
   display: flex;
   text-align: right;
-  padding-right: 40px;
-  justify-content: space-between;
+
+  justify-content: space-around;
 }
 nav ul li {
   display: inline-block;
   font-size: 16px;
   font-weight: 600;
   color: #3a3a3a;
+}
+/* main related styles */
+.Influencer-content {
+  display: flex;
+  margin: 100px 100px;
+}
+.Influencer-description {
+  color: #3a3a3a;
+  font-size: 16px;
+  font-weight: 600;
+}
+.Influencer-title {
+  color: #3a3a3a;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 70px;
+}
+.btn1 {
+  color: #ffffff;
+  border-radius: 41px;
+  background: #e02c6d;
+  padding: 10px 24px;
+  align-items: flex-start;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.3s;
+}
+.btn1:hover {
+  opacity: 0.5;
+}
+.img-container {
+  background-image: url(../images/Circle\ design.svg);
+}
+/* Sponsors section */
+.logos-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 0 160px;
+  margin-bottom: 100px;
+}
+.shopping-title {
+  text-align: center;
+  font-size: 28px;
+  color: #3a3a3a;
+  font-weight: 600;
+}
+
+.product-title {
+  color: #18191f;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 6px;
+  text-align: left;
+  padding-left: 12px;
+}
+.price {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "Inter", "Arial";
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 6px;
+  text-align: left;
+  padding-left: 12px;
+}
+.product-description {
+  color: #787885;
+  font-family: "Inter", "Arial";
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 0;
+  text-align: left;
+  padding-left: 12px;
+  width: 196px;
+}
+.products {
+  width: 329px;
+  height: 476px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
+}
+.product-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
 }
