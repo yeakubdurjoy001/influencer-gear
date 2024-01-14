@@ -129,3 +129,33 @@ nav ul li {
   justify-content: center;
   justify-content: space-around;
 }
+.feature-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature-description {
+  width: 501px;
+  height: 88px;
+  flex-shrink: 0;
+  color: #6c6c6c;
+}
+.feature-title {
+  font-size: 38px;
+  font-weight: 700;
+}
+.btn-primary {
+  color: #ffffff;
+  border-radius: 6px;
+  background: #e02c6d;
+  padding: 10px 24px;
+  align-items: flex-start;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.3s;
+}
+.btn1:hover {
+  opacity: 0.5;
+}
