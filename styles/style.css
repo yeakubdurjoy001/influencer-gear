@@ -82,6 +82,7 @@ nav ul li {
   color: #3a3a3a;
   font-weight: 600;
 }
+/* Shopping And Product Section Styles */
 
 .product-title {
   color: #18191f;
@@ -123,15 +124,17 @@ nav ul li {
   text-align: center;
   padding-top: 10px;
   margin-bottom: 25px;
+  margin-left: 25px;
 }
 .product-container {
   display: flex;
   justify-content: center;
-  justify-content: space-around;
 }
+/* Feature Section Starts From Here */
 .feature-section {
   display: flex;
   justify-content: space-between;
+  margin: 100px 40px;
 }
 
 .feature-description {
@@ -153,9 +156,30 @@ nav ul li {
   gap: 8px;
   border: none;
   cursor: pointer;
-  opacity: 1;
-  transition: 0.3s;
 }
-.btn1:hover {
-  opacity: 0.5;
+
+.footer-section {
+  align-items: center;
+  text-align: center;
+  background: #0a0826;
+  margin-bottom: 0 0;
+  height: 239px;
+}
+.footer-text-container {
+  color: #fff;
+  font-family: "Poppins", "Helvetica Neue";
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 0;
+  padding-top: 14px;
+}
+.copyright-text {
+  color: #d9dbe1;
+  font-size: 14px;
+  font-weight: 700;
+}
+.copyright-text2 {
+  color: #d9dbe1;
+  font-size: 14px;
+  font-weight: 700;
 }
