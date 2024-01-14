@@ -2,7 +2,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  margin: 0 0;
 }
+/* Header Related Styles */
 
 header {
   display: flex;
@@ -35,6 +37,7 @@ nav ul li {
   color: #3a3a3a;
 }
 /* main related styles */
+
 .Influencer-content {
   display: flex;
   margin: 100px 100px;
@@ -50,21 +53,45 @@ nav ul li {
   font-weight: 700;
   line-height: 70px;
 }
-.btn1 {
-  color: #ffffff;
-  border-radius: 41px;
-  background: #e02c6d;
-  padding: 10px 24px;
-  align-items: flex-start;
-  gap: 8px;
-  border: none;
-  cursor: pointer;
-  opacity: 1;
-  transition: 0.3s;
+.button-89 {
+  --b: 3px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  --color: #373b44;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
-.btn1:hover {
-  opacity: 0.5;
+
+.button-89:hover,
+.button-89:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
 }
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+
 .img-container {
   background-image: url(../images/Circle\ design.svg);
 }
@@ -119,7 +146,9 @@ nav ul li {
   flex-shrink: 0;
   border-radius: 5px;
   background: #fff;
-  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   align-items: center;
   text-align: center;
   padding-top: 10px;
@@ -130,7 +159,7 @@ nav ul li {
   display: flex;
   justify-content: center;
 }
-/* Feature Section Starts From Here */
+/* Feature Section related Styles */
 .feature-section {
   display: flex;
   justify-content: space-between;
@@ -147,39 +176,130 @@ nav ul li {
   font-size: 38px;
   font-weight: 700;
 }
+
 .btn-primary {
-  color: #ffffff;
-  border-radius: 6px;
-  background: #e02c6d;
-  padding: 10px 24px;
-  align-items: flex-start;
-  gap: 8px;
-  border: none;
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
   cursor: pointer;
+  display: inline-block;
+  font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
+    "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
+
+.btn-primary:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
+  width: 92%;
+}
+
+.btn-primary:hover {
+  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
+    rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .btn-primary {
+    padding: 16px 48px;
+  }
+}
+
+/* Footer related styles */
 
 .footer-section {
   align-items: center;
   text-align: center;
   background: #0a0826;
   margin-bottom: 0 0;
+  width: 1250px;
   height: 239px;
+  margin-left: 0;
 }
 .footer-text-container {
   color: #fff;
   font-family: "Poppins", "Helvetica Neue";
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   padding-bottom: 0;
-  padding-top: 14px;
+  padding-top: 10px;
+  margin: 0 0;
 }
 .copyright-text {
   color: #d9dbe1;
   font-size: 14px;
   font-weight: 700;
+  margin-top: 0;
 }
 .copyright-text2 {
   color: #d9dbe1;
   font-size: 14px;
   font-weight: 700;
+}
+footer img {
+  width: 35px;
+  height: 35px;
+  padding-left: 5px;
+  padding-top: 25px;
+}
+footer p {
+  margin: 16px 0;
+}
+
+@media screen and (max-width: 576px) {
+  .feature-section,
+  .product-container,
+  .logos-container,
+  .Influencer-content {
+    flex-direction: column;
+  }
+  header {
+    flex-direction: column-reverse;
+    width: 20%;
+    align-items: center;
+  }
+  .logos-container {
+    gap: 45px;
+    align-items: center;
+  }
+  main > img {
+    width: 100%;
+  }
+  .product-container {
+    align-items: center;
+  }
+  footer p {
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 140px;
+  }
+  .contacts-info {
+    margin-right: 700px;
+  }
+  .feature-section {
+    align-items: center;
+  }
+  nav > ul {
+    display: none;
+  }
 }
